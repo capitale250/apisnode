@@ -59,4 +59,8 @@ app.use(function (req, res, next) {
 
 app.use(express.static(__dirname + '/views'));
 
-app.listen(process.env.PORT||5000, () => console.log(`server Running on port: http://localhost${PORT} `));
+
+const PORT = process.env.PORT || 5000;
+app.listen(PORT, function () {
+  console.log('Server is started on http://127.0.0.1:'+PORT);
+});
