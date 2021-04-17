@@ -13,7 +13,7 @@ import session from'express-session';
 
 
 var app = express();
-const PORT = 5000;
+const port = 5000;
 const __dirname=path.resolve();
 
 app.use(session({
@@ -59,4 +59,4 @@ app.use(function (req, res, next) {
 
 app.use(express.static(__dirname + '/views'));
 
-app.listen(PORT, () => console.log(`server Running on port: http://localhost${PORT} `));
+app.listen(process.env.PORT||port, () => console.log(`server Running on port: http://localhost${PORT} `));
