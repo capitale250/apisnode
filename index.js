@@ -59,4 +59,4 @@ app.use(function (req, res, next) {
 
 app.use(express.static(__dirname + '/views'));
 
-app.listen(process.env.PORT||port, () => console.log(`server Running on port: http://localhost${PORT} `));
+app.listen(process.env.PORT||5000, () => console.log(`server Running on port: http://localhost${PORT} `));
